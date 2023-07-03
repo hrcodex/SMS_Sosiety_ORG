@@ -23,10 +23,7 @@ class WebsiteController extends Controller
     {
         return view('frontend.gallery.gallery');
     }
-    public function memberIndex()
-    {
-        return view('frontend.members.members');
-    }
+   
 
     public function detailsIndex()
     {

@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 
 class DetailsController extends Controller
 {
-    public function index()
+    public function index($id)
     {
 
         $contact = Contact::find(1);
-        $events = Event::find(1);
+        $events = Event::find($id);
 
 
         return view('frontend.blog_details.blog_details', [

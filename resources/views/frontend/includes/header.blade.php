@@ -25,17 +25,17 @@
                 <li><a href="{{ asset('/') }}#about-section">About</a></li>  
              
                 {{-- <li><a href="#gallery-section">Gallery</a></li> --}}
-                <li><a href="{{ route('details.index') }}">Details</a></li>
+            
                 <li><a href="{{ route('member.index') }}">Members</a></li>
                 <li><a href="{{route('gallery.index')}}">Gallery</a></li>
                 <li><a href="{{ route('event.index') }}">Events</a></li>
                 <li><a href="{{ route('notice.index') }}">Notice</a></li>
                 
-                <li><a href="#contact">Contact</a></li>
+                <li><a href="{{ asset('/') }}#contact">Contact</a></li>
             </ul>
             
             <!-- Orange Button -->
-            <div class="link-orange-top"><a href="#">Donate Now</a></div>
+            <div class="link-orange-top"><a href="tel:{{ $contact->phone }}">Donate Now</a></div>
         </div><!-- Menu navigation end -->			
     </div>
 </div><!-- Header end -->

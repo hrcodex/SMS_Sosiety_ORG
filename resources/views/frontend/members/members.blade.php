@@ -9,25 +9,8 @@ Members
 <div class="breadcrumbs">
     <div class="container">
         <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Bread</a></li>
-        <li><a href="#">Crumbs</a></li>
-        </ul>
-        
-        <!-- button floating at right of breadcrumbs -->
-        <div class="breadcrumbs-right"><a class="hide-bread" href="#"><i class="fa fa-chevron-up"></i> Hide</a></div>
-    </div>
-</div><!-- breadcrumbs end -->
-
-    
-
-<!-- breadcrumbs end -->
-<div class="breadcrumbs">
-    <div class="container">
-        <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Bread</a></li>
-        <li><a href="#">Crumbs</a></li>
+        <li><a href="{{ route('home.index') }}">Home</a></li>
+        <li><a href="{{ route('member.index') }}">Members</a></li>
         </ul>
         
         <!-- button floating at right of breadcrumbs -->
@@ -50,6 +33,9 @@ Members
                     <div class="row row-volunteers">
                     
 
+                        @foreach ($member as $data)
+                            
+                       
 
                         <!-- volunteer one Start -->
                         <div class="col-md-6 animated fadeInLeft ">		
@@ -59,8 +45,8 @@ Members
                                 
                                     <!-- volunteer name/title -->
                                     <div class="col-md-4">
-                                        <h4>James Bravo</h4>
-                                        <span class="role">Member</span>
+                                        <h4>{{ $data->name }}</h4>
+                                        <span class="role">{{ $data->position }}</span>
                                     </div>
                                     
                                     <!-- volunteer photo -->
@@ -69,7 +55,7 @@ Members
                                         width: 100px;
                                         height: 100px;">
                                         
-                                        <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg?w=2000"
+                                        <img src="{{ asset('/') }}{{ $data->image }}"
 
                                          style="
                                          border-radius:50% ;
@@ -84,10 +70,10 @@ Members
                                     <div class="col-md-4">
                                         <span class="gray-text">Join Us.</span>
                                         <ul class="social-icons">
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                            <li><a href="{{ $data->facebook_id }}"><i class="fa fa-facebook"></i></a></li>
+                                            <li><a href="{{ $data->twitter_id }}"><i class="fa fa-twitter"></i></a></li>
+                                            <li><a href="{{ $data->instagram_id }}"><i class="fa fa-instagram"></i></a></li>
+                                            <li><a href="{{ $data->linkedin_id }}"><i class="fa fa-linkedin"></i></a></li>
                                         </ul>
                                     </div>
                                     
@@ -97,7 +83,7 @@ Members
                         </div>    
                          <!-- volunteer one End -->
                         
-                        
+                         @endforeach
   
                     </div>
                     

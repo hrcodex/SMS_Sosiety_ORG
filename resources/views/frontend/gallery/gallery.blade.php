@@ -9,9 +9,8 @@ Gallery
 <div class="breadcrumbs">
     <div class="container">
         <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Bread</a></li>
-        <li><a href="#">Crumbs</a></li>
+            <li><a href="{{ route('home.index') }}">Home</a></li>
+            <li><a href="{{ route('gallery.index') }}">Gallery</a></li>
         </ul>
         
         <!-- button floating at right of breadcrumbs -->

@@ -9,9 +9,8 @@ Gallery
     <div class="breadcrumbs">
         <div class="container">
             <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Bread</a></li>
-            <li><a href="#">Crumbs</a></li>
+				<li><a href="{{ route('home.index') }}">Home</a></li>
+				<li><a href="{{ route('event.index') }}">Events</a></li>
             </ul>
             
             <!-- button floating at right of breadcrumbs -->
@@ -48,7 +47,7 @@ Gallery
 								<div class="blog-item-t">
 									<span class="fa fa-file-text-o"></span>									
 									<span class="link-read-more-w">
-										<a href="#" class="link-read-more"><span>Read More</span> <i class="fa fa-arrow-right"></i></a>
+										<a href="{{ route('details.index',$data->id) }}" class="link-read-more"><span>Read More</span> <i class="fa fa-arrow-right"></i></a>
 									</span>
 								</div>
 							</div>
@@ -56,7 +55,7 @@ Gallery
 							<!-- post excerpt -->
 							<div class="blog-item">
 								<div class="blog-item-left">
-									<h4><a href="#" class="title">{{ $data->title }}</a></h4>
+									<h4><a href="{{ route('details.index',$data->id) }}" class="title">{{ $data->title }}</a></h4>
 									<div class="blog-item-excerpt">								
 										{!! Str::limit($data->description, 70) !!}
 									</div>
@@ -80,7 +79,7 @@ Gallery
 										<span class="blog-item-number">{{ date('d', strtotime($data->date)); }}</span>
 										<span class="blog-item-month"><p>{{ date('M', strtotime($data->month)); }}</p></span>
 									</div>
-									<a href="#" class="arrow-right"><i class="fa fa-arrow-right"></i></a>
+									<a href="{{ route('details.index',$data->id) }}" class="arrow-right"><i class="fa fa-arrow-right"></i></a>
 								</div>						
 							</div><!-- post excerpt end -->
 						</div><!-- Blog item end -->

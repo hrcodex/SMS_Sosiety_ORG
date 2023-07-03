@@ -1,10 +1,12 @@
 <?php
 
+
 use App\Http\Controllers\frontend\DetailsController;
 use App\Http\Controllers\frontend\GalleryController;
 use App\Http\Controllers\frontend\HomeController;
 use App\Http\Controllers\frontend\WebsiteController;
 use App\Http\Controllers\frontend\EventController;
+use App\Http\Controllers\frontend\MemberController;
 use Illuminate\Support\Facades\Route;
 
 //Website All Routes
@@ -17,23 +19,10 @@ Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index
 
 Route::get('/events', [EventController::class, 'index'])->name('event.index');
 
-Route::get('/details', [DetailsController::class, 'index'])->name('details.index');
+Route::get('/details/{id}', [DetailsController::class, 'index'])->name('details.index');
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-Route::get('/members', [WebsiteController::class, 'memberIndex'])->name('member.index');
+Route::get('/members', [MemberController::class, 'index'])->name('member.index');
 
 
 Route::get('/notice', [WebsiteController::class, 'noticeIndex'])->name('notice.index');
