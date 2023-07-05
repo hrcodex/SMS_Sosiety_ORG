@@ -27,5 +27,3 @@ Route::get('web/members', [MemberController::class, 'index'])->name('web_member.
 
 Route::get('web/notice', [NoticeController::class, 'index'])->name('web_notice.index');
 
-// ------------------------
-// Route::get('social-media-shere', [SosialShereButtonController ::class,'shereWidget'])->name('shere.index');

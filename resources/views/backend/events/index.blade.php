@@ -46,12 +46,8 @@ Events SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chitta
                                         </span>
                                 </div>
                                 <div class="product-content p-3">
-                                    <a href="{{ route('event.edit',$data->id) }}" class="fw-bold">{{ $data->title }}</a>
-                                    <p class="text-muted" @php
-                                        echo substr('your text',0,5);
-                                    @endphp>@php
-                                   echo substr($data->description, 0,  100);
-                                    @endphp<span class="text-primary">....</span> </p>   
+                                    <a href="{{ route('event.edit',$data->id) }}" class="fw-bold">{{ Str::limit($data->title,30) }}</a>
+                                    <p class="text-muted">{!! Str::limit($data->description, 70) !!}<span class="text-primary">....</span> </p>   
                                 </div>
                             </div>
                         </div>

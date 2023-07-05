@@ -2,7 +2,7 @@
 <div class="header" id="header">
     <div class="container">
         <!-- Logo -->
-        <div id="logo" class="float-left"><a href="{{route('web_home.index')}}"><img src="{{ asset('/') }}images/SMS-LOGO.png" alt="" /></a></div>
+        <div id="logo" class="float-left"><a href="{{route('web_home.index')}}"><img src="{{ asset('/') }}{{ $contact->image }}" alt="" /></a></div>
         
         <!-- Menu navigation -->
 

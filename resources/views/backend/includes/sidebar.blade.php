@@ -5,8 +5,9 @@
         <span class="logo-icon">
           <img src="{{ asset('/') }}frontend/assets/images/HR-Codex-Ltd-Logo.png"   alt="">
         </span>
-        <span class="logo-text">HRCodex LTD</span>
+        <span class="logo-text" id='website'>HRCodex Panel</span>
       </a>
+     
       <!-- Menu: main ul -->
 
      
@@ -47,7 +48,7 @@
         </li>
         <li>
           <a class="m-link" href="{{ route('monthlyFees.index') }}">
-            <i class="icofont-calculator fs-5"></i>
+            <i class="icofont-chart-bar-graph fs-5"></i>
             <span>Monthly Fee Report</span>
           </a>
         </li>
@@ -65,12 +66,7 @@
           </a>
         </li>
       
-        <li>
-          <a class="m-link" href="{{ route('create_member.index') }}">
-            <i class="icofont-ui-add fs-5"></i>
-            <span>Member Temp</span>
-          </a>
-        </li>
+        
       
         <li class="collapsed">
           <a class="m-link" data-bs-toggle="collapse" data-bs-target="#categories" href="#">
@@ -109,8 +105,15 @@
             <li>
               <a class="ms-link" href="{{route('position.index')}}">Position</a>
             </li>
-           
+                       
           </ul>
+        </li>
+        <br>
+        <li>
+          <a class="m-link" href="{{ route('create_member.index') }}">
+            <i class="icofont-ui-add fs-5"></i>
+            <span>Member Temp</span>
+          </a>
         </li>
       
       </ul>
@@ -122,3 +125,5 @@
       </button>
     </div>
   </div>
+  
+  

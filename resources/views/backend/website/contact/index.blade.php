@@ -87,11 +87,11 @@ Contact SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chitt
 
           <div class="mb-3">
             <label class="form-label">Keywords</label>
-            <textarea class="form-control" name="keywords"  rows="3" maxlength="300" id="validationCustom07s" placeholder="keywords ..." id="validationCustom03" >{!! $contact->keywords !!}</textarea>
+            <textarea class="form-control" name="keywords"  rows="3" id="validationCustom07s" placeholder="keywords ..." id="validationCustom03" >{!! $contact->keywords !!}</textarea>
           </div>
           <div class="mb-3">
             <label class="form-label">Website Description</label>
-            <textarea class="form-control" name="description" rows="6" maxlength="300" id="validationCustom07s" placeholder="Description ..." id="validationCustom03" >{!! $contact->website_name !!}</textarea>
+            <textarea class="form-control" name="description" rows="6"  id="validationCustom07s" placeholder="Description ..." id="validationCustom03" >{!! $contact->description !!}</textarea>
           </div>
 
           <div class="mb-3">

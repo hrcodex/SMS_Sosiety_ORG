@@ -37,7 +37,13 @@ Home SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittago
                     <ul class="text-slider">
 
 						@foreach ($slider as $data)
+						
+						@if ($loop->first)
 						<li class="active animated fadeIn"><p>{{ $data->description }}</p></li>
+						@else
+						<li class="animated fadeIn"><p>{{ $data->description }}</p></li>
+						@endif
+
 						 @endforeach
                      
                       
@@ -77,6 +83,7 @@ Home SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittago
 						
 					</div>
 				</div>
+				
 				
 				<!-- Col 3 Accordion -->
 				<div class="col-md-9  animate fadeInRight">

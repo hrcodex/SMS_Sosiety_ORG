@@ -35,7 +35,7 @@
                                 <!-- Tweet 01 -->
                                 <li>
                                     <div class="tweet-body">
-                                        SMS Sosiety Foundation is a non-profit organization that empowers underprivileged individuals and communities in Bangladesh through education, youth development, women's empowerment, climate change, governance and poverty alleviation.
+                                        এসএমএস সোসাইটি ফাউন্ডেশন, বাংলাদেশের চট্টগ্রামের সোনারগাঁও রাঙ্গুনিয়ার মনোরম অঞ্চলে অবস্থিত, স্থানীয় সম্প্রদায়ের ক্রমাগত সেবা এবং উন্নতির জন্য নিবেদিত একটি অসাধারণ সংস্থা। এই সংস্থাটিকে যা আলাদা করে তা হল এর নম্র উত্স, কারণ এটি গ্রামীণ মানুষের জীবনে একটি অর্থপূর্ণ পার্থক্য করার একটি ভাগ করা দৃষ্টিভঙ্গি দ্বারা চালিত একদল তরুণ, সহানুভূতিশীল ব্যক্তিদের দ্বারা প্রতিষ্ঠিত হয়েছিল।
                                     </div>
                                     
                                 </li>
@@ -50,9 +50,9 @@
                 <!-- Footer Widget 3-->
                 <div class="col-md-4">
                     <div class="widget widget-footer">
-                        <h4>Making the world a better place together.</h4>
-                        <h4>Ending hunger. For good.</h4>
-                        <h4>happiness Comes from your Action.</h4>
+                        <h5 class="color-green">Making the world a better place together.</h5>
+                        <h5 class="color-green">Ending hunger. For good.</h5>
+                        <h5 class="color-green">happiness Comes from your Action.</h5>
                         
                     </div>
                 </div>
