@@ -128,7 +128,7 @@ Route::group(['middleware' => 'prevent-back-history'], function () { //Prevent B
             Route::post('/position/store', [PositionController::class, 'store'])->name('position.store');
             Route::get('/position/delete/{id}', [PositionController::class, 'destroy'])->name('position.destroy');
         });
-        //Settings
+        //Notice
         Route::prefix('notice')->group(function () {
             Route::get('/index', [NoticeController::class, 'index'])->name('notice.index');
             Route::post('/store', [NoticeController::class, 'store'])->name('notice.store');

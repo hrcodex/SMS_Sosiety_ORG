@@ -27,9 +27,9 @@ class MemberFormTEMPController extends Controller
         $member->national_identity = $request->national_identity;
         $member->phone = $request->phone;
 
-        $member->payment_date = date('d-M-Y', strtotime($request->payment_month));
-        $member->payment_month = date('M-Y', strtotime($request->payment_month));
-        $member->payment_year = date('Y', strtotime($request->payment_month));
+        $member->created_date = date('d-M-Y', strtotime(today()));
+        $member->created_month = date('M-Y', strtotime(today()));
+        $member->created_year = date('Y', strtotime(today()));
 
         $member->email = $request->email;
         $member->publication_status = 1;
