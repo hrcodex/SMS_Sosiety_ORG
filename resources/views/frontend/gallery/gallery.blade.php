@@ -1,16 +1,14 @@
 @extends('frontend.master')
 @section('title')
-
-Gallery
-    
+Gallery SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 @section('body')
 <!-- breadcrumbs end -->
 <div class="breadcrumbs">
     <div class="container">
         <ul>
-            <li><a href="{{ route('home.index') }}">Home</a></li>
-            <li><a href="{{ route('gallery.index') }}">Gallery</a></li>
+            <li><a href="{{ route('web_home.index') }}">Home</a></li>
+            <li><a href="{{ route('web_gallery.index') }}">Gallery</a></li>
         </ul>
         
         <!-- button floating at right of breadcrumbs -->
@@ -25,7 +23,7 @@ Gallery
     <div class="section blog" >
         <div class="container">
             <!-- page title -->
-            <div class="block-title"><h1>Our Gallery</h1></div>
+            <div class="block-title"><h1>Gallery</h1></div>
             
             <!-- main row -->
             <div class="row">
@@ -38,10 +36,12 @@ Gallery
                             <div class="gallery-wrapper">
                                 
                                 <!-- Filter Links -->
-                                <div class="gallery-filter">						 
-                                    <a href="#" data-filter=".africa">Africa</a> 
-                                    <a href="#" data-filter=".indonesia">Indonesia</a>
-                                    <a href="#" data-filter=".syria">Syria</a>
+                                <div class="gallery-filter">
+                                    						 
+                                    <a href="#" data-filter=".Events">Events</a> 
+                                    <a href="#" data-filter=".Speacial">Speacial</a>
+                                    <a href="#" data-filter=".Metting">Metting</a>
+
                                     <a href="#" data-filter="*" class="current"><i class="fa fa-picture-o"></i></a>	  
                                 </div>
                              
@@ -55,14 +55,14 @@ Gallery
                                         
                                    
                                     <!-- 01 Start-->
-                                    <div class="item africa m-auto">											
+                                    <div class="item {{ $item->category }} m-auto">											
                                         <div class="item-wrapper">
                                         
                                             <!-- gallery item image -->
                                             <img alt="" class="magnific-popup" src="{{ asset('/') }}{{ $item->image }}"/>
                                             
                                             <div class="item-overlay">
-                                                <a href=""><h4>{{ $item->title }}</h4></a>
+                                                <a href="{{ route('web_details.index',$item->id) }}"><h4>{{ $item->title }}</h4></a>
                                                 <span class="info">{!! Str::limit($item->description, 20) !!}</span>
                                                 
                                                 <!-- gallery item icons -->

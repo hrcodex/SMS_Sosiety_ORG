@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 
 @section('title')
-    All Members
+Donation SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 
 
@@ -70,13 +70,13 @@
                       
 
 
-                        @foreach ($donation as $data )
+                        @foreach ($donation as $key=>$data )
                           
                       
 
                         <tr role="row" class="even">
                           <td tabindex="0" class="sorting_1">
-                            <strong>{{ $data->members->name }}</strong>
+                            <strong><span>{{ ++$key }}. </span> {{ $data->members->name }}</strong>
                           </td>
 
                           <td><strong> {{ $data->amount }} <span>টাকা</span></strong></td>

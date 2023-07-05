@@ -21,6 +21,12 @@
             <span>Dashboard</span>
           </a>
         </li>
+        <li>
+          <a class="m-link active" href="{{ route('notice.index') }}">
+            <i class="icofont-notification fs-5"></i>
+            <span>Notice</span>
+          </a>
+        </li>
      
      
         <li>
@@ -37,6 +43,12 @@
           <a class="m-link" href="{{ route('members.index') }}">
             <i class="icofont-users fs-5"></i>
             <span>Members</span>
+          </a>
+        </li>
+        <li>
+          <a class="m-link" href="{{ route('monthlyFees.index') }}">
+            <i class="icofont-calculator fs-5"></i>
+            <span>Monthly Fee Report</span>
           </a>
         </li>
       

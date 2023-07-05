@@ -1,8 +1,6 @@
 @extends('frontend.master')
 @section('title')
-
-Notice
-    
+Notice SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 @section('body')
     <!-- breadcrumbs end -->
@@ -34,64 +32,33 @@ Notice
 						<!-- Blog Title -->
 						<div class="block-title"><h1>Short Notice</h1></div>
                        
-						
+						@foreach ($notice as $key=>$data)
+
 						<!-- blog item 1 -->
-						  
 							<!-- post excerpt -->
 							<div class="blog-item-wrapper bg-warning" >
 								<div class="blog-item-left" style="border-left: 5px solid rgb(159, 98, 234);">
-									<h4 ><a href="#" class="title" >আমরা মানবসেবায় কর্মগত</a>
+									<h4>
+										<a class="title" >{{ ++$key }} <span> . </span> {{ $data->title }}</a>
+										
+										
                                         <div class="blog-item-right">
                                             <div class="blog-item-date">
-                                                <span class="blog-item-number">28</span>
-                                                <span class="blog-item-month">AUG</span>
-                                            </div>
-                                            
+												<span class="blog-item-number">{{ date('d', strtotime($data->date)); }}</span>
+												<span class="blog-item-month"><p>{{ date('M', strtotime($data->month)); }}</p></span>
+											</div>
+                                            <a class="arrow-right">{{ $data->year }}</a>
                                         </div>	
                                     </h4>
-									<div class="blog-item-excerpt">								
-                                        মানুষের সেবা করাই উত্তম কর্ম মানুষের সেবা করাই উত্তম কর্ম মানুষের সেবা করাই উত্তম কর্ম করাই উত্তম কর্ম মানুষের সেবা করাই উত্তম কর্ম মানুষের সেবা করাই উত্তম কর্ম 
-									</div>
-									
-									<!-- social icons -->
-									
-								</div>
-								
-								<!-- post date -->
-													
+									<div class="blog-item-excerpt">{!! $data->description !!}</div>
+								</div>						
 							</div><!-- post excerpt end -->
 						<!-- blog item 1 -->
+
+						@endforeach
 						  
-							<!-- post excerpt -->
-							<div class="blog-item-wrapper bg-warning" >
-								<div class="blog-item-left" style="border-left: 5px solid rgb(159, 98, 234);">
-									<h4 ><a href="#" class="title" >আমরা মানবসেবায় কর্মগত</a>
-                                        <div class="blog-item-right">
-                                            <div class="blog-item-date">
-                                                <span class="blog-item-number">28</span>
-                                                <span class="blog-item-month">AUG</span>
-                                            </div>
-                                            
-                                        </div>	
-                                    </h4>
-									<div class="blog-item-excerpt">								
-                                        মানুষের সেবা করাই উত্তম কর্ম মানুষের সেবা করাই উত্তম কর্ম মানুষের সেবা করাই উত্তম কর্ম করাই উত্তম কর্ম মানুষের সেবা করাই উত্তম কর্ম মানুষের সেবা করাই উত্তম কর্ম 
-									</div>
-									
-									<!-- social icons -->
-									
-								</div>
-								
-								<!-- post date -->
-													
-							</div><!-- post excerpt end -->
-						
-						
-						
-						
-					
-					
-					
+
+							
 					
 
 				</div><!-- main row blog-sidebar end -->

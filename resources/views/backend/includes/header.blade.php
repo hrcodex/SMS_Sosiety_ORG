@@ -7,6 +7,13 @@
          
           
           <div class="dropdown user-profile ml-2 ml-sm-3 d-flex align-items-center zindex-popover">
+
+            {{-- <div class="d-flex">
+              <a class="nav-link text-primary collapsed" href="{{ route('download.index') }}" title="Get Help">
+                  <i class="icofont-download fs-5"></i>
+              </a>
+          </div> --}}
+
             <div class="u-info me-2">
               <p class="mb-0 text-end line-height-sm">
                 <span class="font-weight-bold">{{ Auth::user()->name }}</span>

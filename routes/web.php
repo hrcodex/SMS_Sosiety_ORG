@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\backend\DownloadController;
 use App\Http\Controllers\backend\DashboardController;
 use App\Http\Controllers\backend\AdminController;
 use App\Http\Controllers\backend\DonationController;
@@ -12,6 +13,7 @@ use App\Http\Controllers\backend\MonthlyFeeController;
 use App\Http\Controllers\backend\website\FaqController;
 use App\Http\Controllers\backend\website\SliderController;
 use App\Http\Controllers\backend\MemberFormTEMPController;
+use App\Http\Controllers\backend\NoticeController;
 use App\Http\Controllers\backend\settings\PositionController;
 use App\Http\Controllers\backend\website\AboutController;
 use App\Http\Controllers\backend\website\MotiveController;
@@ -33,9 +35,9 @@ Route::group(['middleware' => 'prevent-back-history'], function () { //Prevent B
 
         //default Login Dashboard 
         Route::get('/dashboard', [DashboardController::class, 'default'])->name('dashboard.default');
-         // Dashboard 
-         
-         Route::prefix('dashboard')->group(function () {
+        // Dashboard 
+
+        Route::prefix('dashboard')->group(function () {
             Route::get('/index/{id}', [DashboardController::class, 'index'])->name('dashboard.index');
             // Route::get('/data/show/{id}', [DashboardController::class, 'dataShow'])->name('dashboard.data_show');
         });
@@ -72,7 +74,10 @@ Route::group(['middleware' => 'prevent-back-history'], function () { //Prevent B
         });
         //Monthly Fees
         Route::prefix('monthlyFees')->group(function () {
+            Route::get('/index', [MonthlyFeeController::class, 'index'])->name('monthlyFees.index');
             Route::post('/store', [MonthlyFeeController::class, 'store'])->name('monthlyFees.store');
+            Route::get('/monthlyFees/{id}', [MonthlyFeeController::class, 'filter'])->name('monthlyFees.filter');
+            Route::get('/delete/{id}', [MonthlyFeeController::class, 'destroy'])->name('monthlyFees.destroy');
         });
 
         //Donation
@@ -99,7 +104,7 @@ Route::group(['middleware' => 'prevent-back-history'], function () { //Prevent B
             Route::get('/slider/edit/{id}', [SliderController::class, 'edit'])->name('slider.edit');
             Route::post('/slider/update', [SliderController::class, 'update'])->name('slider.update');
             Route::get('/slider/delete/{id}', [SliderController::class, 'destroy'])->name('slider.destroy');
-            //__sliders__//
+            //__Faq__//
             Route::get('/faq/index', [FaqController::class, 'index'])->name('faq.index');
             Route::post('/faq/store', [FaqController::class, 'store'])->name('faq.store');
             Route::get('/faq/destroy/{id}', [FaqController::class, 'destroy'])->name('faq.destroy');
@@ -122,9 +127,28 @@ Route::group(['middleware' => 'prevent-back-history'], function () { //Prevent B
             Route::get('/position/index', [PositionController::class, 'index'])->name('position.index');
             Route::post('/position/store', [PositionController::class, 'store'])->name('position.store');
             Route::get('/position/delete/{id}', [PositionController::class, 'destroy'])->name('position.destroy');
-          
-
         });
+        //Settings
+        Route::prefix('notice')->group(function () {
+            Route::get('/index', [NoticeController::class, 'index'])->name('notice.index');
+            Route::post('/store', [NoticeController::class, 'store'])->name('notice.store');
+            Route::get('/destroy/{id}', [NoticeController::class, 'destroy'])->name('notice.destroy');
+            Route::get('/edit/{id}', [NoticeController::class, 'edit'])->name('notice.edit');
+            Route::post('/update', [NoticeController::class, 'update'])->name('notice.update');
+        });
+
+        
+
+
+
+
+
+
+
+
+
+
+        
     });
 
 

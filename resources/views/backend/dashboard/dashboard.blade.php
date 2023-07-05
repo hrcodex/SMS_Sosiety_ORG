@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 
 @section('title')
-    Dashboard
+Dashboard SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 
 @section('body')
@@ -42,7 +42,7 @@
           <div class="alert-info alert mb-0">
             <div class="d-flex align-items-center">
               <div class="avatar rounded no-thumbnail bg-gradient text-black">
-                <i class="icofont-user fs-4"></i>
+                <i class="icofont-shield fs-4"></i>
               </div>
               <div class="flex-fill ms-3 text-truncate">
                 <div class="h6 mb-0">Total Admin</div>
@@ -51,20 +51,20 @@
             </div>
           </div>
         </div>
-        {{-- <div class="col">
+        <div class="col">
           <div class="alert-dark alert mb-0">
             <div class="d-flex align-items-center">
               <div class="avatar rounded no-thumbnail bg-success text-light">
-                <i class="icofont-ui-user-group fs-4"></i>
+                <i class="icofont-notification fs-4"></i>
               </div>
               <div class="flex-fill ms-3 text-truncate">
-                <div class="h6 mb-0">Associate</div>
-                <span class="small">{{ count($user_associate); }} জন</span>
+                <div class="h6 mb-0">Total Notice</div>
+                <span class="small">{{ count($notice) }} টি</span>
               </div>
             </div>
           </div>
         </div>
-         --}}
+        
        
        
       </div>
@@ -110,11 +110,11 @@
                       <div class="left-info">
                         <span class="text-muted">Total Amount</span>
                         <div>
-                          <span class="fs-6 fw-bold me-2">{{ $in_total_amount }}</span>
+                          <span class="fs-6 fw-bold me-2">{{ $in_total_amount }} টাকা </span>
                         </div>
                       </div>
                       <div class="right-icon">
-                        <i class="icofont-bag fs-3 color-light-orange"></i>
+                        <i class="icofont-money fs-3 color-light-orange"></i>
                       </div>
                     </div>
                   </div>
@@ -125,11 +125,11 @@
                       <div class="left-info">
                         <span class="text-muted">Current Amount</span>
                         <div>
-                          <span class="fs-6 fw-bold me-2">{{ $current_amount }}</span>
+                          <span class="fs-6 fw-bold me-2">{{ $current_amount }} টাকা </span>
                         </div>
                       </div>
                       <div class="right-icon">
-                        <i class="icofont-shopping-cart fs-3 color-lavender-purple"></i>
+                        <i class="icofont-calculator-alt-2 fs-3 color-lavender-purple"></i>
                       </div>
                     </div>
                   </div>
@@ -140,11 +140,11 @@
                       <div class="left-info">
                         <span class="text-muted">Total Fees</span>
                         <div>
-                          <span class="fs-6 fw-bold me-2">{{ $total_monthly_fees }}</span>
+                          <span class="fs-6 fw-bold me-2">{{ $total_monthly_fees }} টাকা </span>
                         </div>
                       </div>
                       <div class="right-icon">
-                        <i class="icofont-calculator-alt-2 fs-3 color-danger"></i>
+                        <i class="icofont-taka-true fs-3 color-danger"></i>
                       </div>
                     </div>
                   </div>
@@ -155,11 +155,11 @@
                       <div class="left-info">
                         <span class="text-muted">Total Donation</span>
                         <div>
-                          <span class="fs-6 fw-bold me-2 ">{{ $total_donation }}</span>
+                          <span class="fs-6 fw-bold me-2 ">{{ $total_donation }} টাকা </span>
                         </div>
                       </div>
                       <div class="right-icon">
-                        <i class="icofont-sale-discount fs-3 color-santa-fe"></i>
+                        <i class="icofont-bag-alt fs-3 color-santa-fe"></i>
                       </div>
                     </div>
                   </div>
@@ -171,7 +171,7 @@
                       <div class="left-info">
                         <span class="text-muted">Total Expense</span>
                         <div>
-                          <span class="fs-6 fw-bold me-2">{{ $total_expense }}</span>
+                          <span class="fs-6 fw-bold me-2">{{ $total_expense }} টাকা </span>
                         </div>
                       </div>
                       <div class="right-icon">
@@ -186,11 +186,11 @@
                       <div class="left-info">
                         <span class="text-muted">Total Complet Projects</span>
                         <div>
-                          <span class="fs-6 fw-bold me-2">{{ count($total_project) }}</span>
+                          <span class="fs-6 fw-bold me-2">{{ count($total_project) }} টি</span>
                         </div>
                       </div>
                       <div class="right-icon">
-                        <i class="icofont-calculator-alt-1 fs-3 color-lightblue"></i>
+                        <i class="icofont-handshake-deal fs-3 color-lightblue"></i>
                       </div>
                     </div>
                   </div>
@@ -201,11 +201,11 @@
                       <div class="left-info">
                         <span class="text-muted">Total Images</span>
                         <div>
-                          <span class="fs-6 fw-bold me-2">{{ count($total_project) }}</span>
+                          <span class="fs-6 fw-bold me-2">{{ count($total_project) }} টি</span>
                         </div>
                       </div>
                       <div class="right-icon">
-                        <i class="icofont-users-social fs-3 color-light-success"></i>
+                        <i class="icofont-image fs-3 color-light-success"></i>
                       </div>
                     </div>
                   </div>

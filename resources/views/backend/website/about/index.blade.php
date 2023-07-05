@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 
 @section('title')
-    About Section 
+About Us SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 
 
@@ -16,7 +16,7 @@
       <div class="row align-items-center">
         <div class="border-0 mb-4">
           <div class="card-header py-3 no-bg bg-transparent d-flex align-items-center px-0 justify-content-between border-bottom flex-wrap">
-            <h3 class="fw-bold mb-0">বিস্তারিত</h3>
+            <h3 class="fw-bold mb-0">About Us</h3>
             <span>সর্বশেষ পরিবর্তন : {{ $data->members->name }}<strong></strong></span>
           </div>
         </div>
@@ -52,11 +52,12 @@
                
                   <div class="row g-3 align-items-center">
                     <div class="col-md-12 mb-4">
-                  
+                      <label class="form-label">Description :</label>
                         <textarea id="editor" placeholder="desctiption" name="desctiption">{!! $data->desctiption !!}</textarea>
                         </div>
                         <hr>
                     <div class="col-md-12">
+                      <label class="form-label">Video Link :</label>
                         <textarea class="bg-primary-gradient border-gray-400" id="editor" rows="5" cols="90" name="video_link">{!! $data->video_link !!}</textarea>
                     </div>
                     

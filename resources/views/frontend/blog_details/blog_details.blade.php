@@ -1,15 +1,13 @@
 @extends('frontend.master')
 @section('title')
-
-Gallery
-    
+Explorer Event SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 @section('body')
 <!-- breadcrumbs end -->
 <div class="breadcrumbs">
     <div class="container">
         <ul>
-            <li><a href="{{ route('home.index') }}">Home</a></li>
+            <li><a href="{{ route('web_home.index') }}">Home</a></li>
         </ul>
         
         <!-- button floating at right of breadcrumbs -->
@@ -26,10 +24,8 @@ Gallery
         
             <!-- page Title -->
             <div class="block-title">
-                <h1>Our Gallery</h1>
-                
-                <!-- back button -->
-                <a href="#" class="button-back"><i class="fa-chevron-left fa"></i> Back</a>
+                <h1>Explorer Events</h1>
+            
             </div>
             
             <!-- main row -->
@@ -57,34 +53,30 @@ Gallery
                                 <!-- the text -->
                                 <p>{!! $data->description !!}</p>
                                   
-                                    
+                               
+        
                             </div>
                             
                             <!-- details column -->
                             <div class="col-md-4">
                                 <div class="block-title"><h4>Project Information</h4></div>
                                 <ul class="details-dashed">
-                                    <li><i class="fa fa-"></i>Project Name : <span>{{ $data->project_name }}</span></li>
+                                    <li><i class="fa fa-heart"></i>Project Name : <span>{{ $data->project_name }}</span></li>
                                     <li><i class="fa fa-calendar"></i> Date : <span>{{ $data->date }}</span></li>
                                     <li><i class="fa fa-money"></i> Budget: <span>{{ $data->budget }} <span> টাকা</span></span></li>
                                     <li><i class="fa fa-group"></i> Donners: <span>{{ $data->donner }}</span></li>
-                                    <li> <div class="share-excerpt">
-                                        <!-- social icons -->
-                                        <ul class="social-icons">
-                                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                        </ul>
-                                     
-                                    </div></li>
+                                    <li> Shere: <span id="share"></span></li>
+                                   
+                                   
+
+                                    
                                 </ul>									
                             </div>
                             
                         </div><!-- row into post end -->
                         
                         <!-- separator -->
-                        <hr class="double" />
+                        
                         
                       
                     </div><!-- The post body end -->
@@ -94,4 +86,16 @@ Gallery
         </div><!-- main container end -->		
     </div><!-- section end -->	
 </div><!-- general end -->
+@endsection
+@section('script')
+<script src="https://kit.fontawesome.com/7368c40b21.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/jquery.jssocials/1.4.0/jssocials.min.js"></script>
+<script>
+    $("#share").jsSocials({
+        url: '{{ asset('/') }}web/details/{{  $data->id  }}',
+        text: '{{ $data->title }}',
+        showLabel: true,
+        shares: ["email", "twitter", "facebook", "pinterest", "whatsapp"]
+    });
+</script>
 @endsection

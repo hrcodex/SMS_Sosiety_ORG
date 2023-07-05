@@ -94,7 +94,11 @@ class EventsController extends Controller
         $event->image = $imageUrl;
         $event->title = $request->title;
         $event->project_name = $request->project_name;
-        $event->date = $request->date;
+        
+        $event->date = date('d-M-Y', strtotime($request->date));
+        $event->month = date('M-Y', strtotime($request->date));
+        $event->year = date('Y', strtotime($request->date));
+
         $event->time = $request->time;
         $event->budget = $request->budget;
         $event->donner = $request->donner;

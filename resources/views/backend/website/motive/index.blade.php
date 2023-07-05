@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 
 @section('title')
- Motive
+Motive SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 
 
@@ -16,8 +16,8 @@
       <div class="row align-items-center">
         <div class="border-0 mb-4">
           <div class="card-header py-3 no-bg bg-transparent d-flex align-items-center px-0 justify-content-between border-bottom flex-wrap">
-            <h3 class="fw-bold mb-0">Motive</h3>
-            <span>সর্বশেষ পরিবর্তন : {{ $data->members->name }}<strong></strong></span>
+            <h3 class="fw-bold mb-0">Our Motive's</h3>
+            <span>Last Update By : {{ $data->members->name }}<strong></strong></span>
           </div>
         </div>
       </div>

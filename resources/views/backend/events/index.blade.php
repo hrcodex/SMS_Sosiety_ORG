@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 
 @section('title')
-    Events
+Events SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 
 
@@ -15,7 +15,7 @@
                 <div class="card-header py-3 no-bg bg-transparent d-flex align-items-center px-0 justify-content-between border-bottom flex-wrap">
                     <h3 class="fw-bold mb-0">Events List</h3>
                     <div class="btn-group group-link btn-set-task w-sm-100">
-                      <a href="{{ route('event.create') }}" class="btn active d-inline-flex align-items-center"><i class="icofont-plus-square px-2 fs-5"></i>Add New</a>
+                      <a href="{{ route('event.create') }}" class="btn active d-inline-flex align-items-center"><i class="icofont-plus-square px-2 fs-5"></i>New Event</a>
                     </div>
                 </div>
             </div>

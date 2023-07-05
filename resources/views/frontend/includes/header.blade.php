@@ -2,7 +2,7 @@
 <div class="header" id="header">
     <div class="container">
         <!-- Logo -->
-        <div id="logo" class="float-left"><a href="#"><img src="{{ asset('/') }}images/SMS-LOGO.png" alt="" /></a></div>
+        <div id="logo" class="float-left"><a href="{{route('web_home.index')}}"><img src="{{ asset('/') }}images/SMS-LOGO.png" alt="" /></a></div>
         
         <!-- Menu navigation -->
 
@@ -21,15 +21,15 @@
             <!-- Menu Level 1 -->
             <ul>
                 {{-- <li><a href="#about">About</a></li>       --}}
-                <li><a href="{{route('home.index')}}">Home</a></li>      
+                <li><a href="{{route('web_home.index')}}">Home</a></li>      
                 <li><a href="{{ asset('/') }}#about-section">About</a></li>  
              
                 {{-- <li><a href="#gallery-section">Gallery</a></li> --}}
             
-                <li><a href="{{ route('member.index') }}">Members</a></li>
-                <li><a href="{{route('gallery.index')}}">Gallery</a></li>
-                <li><a href="{{ route('event.index') }}">Events</a></li>
-                <li><a href="{{ route('notice.index') }}">Notice</a></li>
+                <li><a href="{{ route('web_member.index') }}">Members</a></li>
+                <li><a href="{{route('web_gallery.index')}}">Gallery</a></li>
+                <li><a href="{{ route('web_event.index') }}">Events</a></li>
+                <li><a href="{{ route('web_notice.index') }}"><u>Notice</u></a></li>
                 
                 <li><a href="{{ asset('/') }}#contact">Contact</a></li>
             </ul>

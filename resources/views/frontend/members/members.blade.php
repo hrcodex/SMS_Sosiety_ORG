@@ -1,16 +1,14 @@
 @extends('frontend.master')
 @section('title')
-
-Members
-    
+Members SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 @section('body')
 <!-- breadcrumbs end -->
 <div class="breadcrumbs">
     <div class="container">
         <ul>
-        <li><a href="{{ route('home.index') }}">Home</a></li>
-        <li><a href="{{ route('member.index') }}">Members</a></li>
+        <li><a href="{{ route('web_home.index') }}">Home</a></li>
+        <li><a href="{{ route('web_member.index') }}">Members</a></li>
         </ul>
         
         <!-- button floating at right of breadcrumbs -->
@@ -25,7 +23,7 @@ Members
     <div class="section blog" >
         <div class="container">
             <!-- page title -->
-            <div class="block-title"><h1>Our Volunteers</h1></div>
+            <div class="block-title"><h1>Our Members</h1></div>
             <!-- main row -->
             <div class="row">
                 <!-- main content col -->
@@ -70,10 +68,20 @@ Members
                                     <div class="col-md-4">
                                         <span class="gray-text">Join Us.</span>
                                         <ul class="social-icons">
-                                            <li><a href="{{ $data->facebook_id }}"><i class="fa fa-facebook"></i></a></li>
-                                            <li><a href="{{ $data->twitter_id }}"><i class="fa fa-twitter"></i></a></li>
-                                            <li><a href="{{ $data->instagram_id }}"><i class="fa fa-instagram"></i></a></li>
-                                            <li><a href="{{ $data->linkedin_id }}"><i class="fa fa-linkedin"></i></a></li>
+
+                                            @if ($data->facebook_id != null)
+                                            <li><a href="{{ $data->facebook_id }}" target="_blank"><i class="fa fa-facebook"> Facebook</i></a></li>   
+                                            @endif
+                                            
+                                            @if ($data->twitter_id != null)
+                                            <li><a href="{{ $data->twitter_id }}" target="_blank"><i class="fa fa-twitter"> Twitter</i></a></li>
+                                            @endif
+                                            @if ($data->instagram_id != null)
+                                            <li><a href="{{ $data->instagram_id }}" target="_blank"><i class="fa fa-instagram"> Instagram</i></a></li>
+                                            @endif
+                                            @if ($data->linkedin_id != null)
+                                            <li><a href="{{ $data->linkedin_id }}" target="_blank"><i class="fa fa-linkedin"> Linkedin</i></a></li>
+                                            @endif
                                         </ul>
                                     </div>
                                     
@@ -87,17 +95,6 @@ Members
   
                     </div>
                     
-                    <!-- pagination -->
-                    <div class="pagination">
-                        <ul class="navigate-page">
-                            <li class="disabled"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                            <li class="active"><a href="#">1</a></li> 
-                            <li><a href="#" class="active">2</a></li> 
-                            <li><a href="#" class="active">3</a></li> 
-                            <li><a href="#" class="active">4</a></li> 
-                            <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                        </ul>
-                    </div><!-- pagination end -->
                     
                 </div><!-- /. Main column end -->
             </div><!-- main row end -->

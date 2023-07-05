@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 
 @section('title')
-    All Expense
+Expense SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 
 
@@ -70,13 +70,13 @@
                       
 
 
-                        @foreach ($expense as $data )
+                        @foreach ($expense as $key=>$data )
                           
                       
 
                         <tr role="row" class="even">
                           <td tabindex="0" class="sorting_1">
-                            <strong>{{ $data->members->name }}</strong>
+                            <strong><span>{{ ++$key }}. </span>{{ $data->members->name }}</strong>
                           </td>
 
                           <td><strong> {{ $data->amount }} <span>টাকা</span></strong></td>
@@ -257,7 +257,7 @@ $.fn.searchit = function (options) {
 
         // Setup default text field and class
         if (opts.textField == null) {
-            $t.before("<input type='textbox' placeholder='ডোনারের নাম লিখুন...' id='__searchit"   + $counter + "'><br>");
+            $t.before("<input type='textbox' placeholder='নাম সিলেক্ট করুন...' id='__searchit"   + $counter + "'><br>");
             opts.textField = $('#__searchit' + $counter);
         }
         if (opts.textField.length > 1) opts.textField = $(opts.textField[0]);

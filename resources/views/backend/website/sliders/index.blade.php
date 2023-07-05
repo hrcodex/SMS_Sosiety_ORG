@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 
 @section('title')
-    Slider
+Slider SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 
 
@@ -13,7 +13,7 @@
         <div class="row align-items-center">
             <div class="border-0 mb-4">
                 <div class="card-header py-3 no-bg bg-transparent d-flex align-items-center px-0 justify-content-between border-bottom flex-wrap">
-                    <h3 class="fw-bold mb-0">Slider List</h3>
+                    <h3 class="fw-bold mb-0">Slider's List</h3>
                     <div class="col-auto d-flex w-sm-100">
                         <button type="button" class="btn btn-primary btn-set-task w-sm-100" data-bs-toggle="modal" data-bs-target="#addNewSlider">
                           <i class="icofont-plus-circle me-2 fs-6"></i>Add New Slider</button>
@@ -95,7 +95,7 @@
         <div class="modal-dialog modal-dialog-centered modal-md modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title fw-bold" id="expaddLabel"> Edit Slider Information</h5>
+              <h5 class="modal-title fw-bold" id="expaddLabel">Add New Slider</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -105,7 +105,7 @@
                 <form class="row g-3 needs-validation" novalidate action="{{ route('slider.store') }}" method="post" enctype="multipart/form-data">
                   @csrf              
                   <div class="">
-                    <label class="form-label">Image</label>
+                    <label class="form-label">Image</label> <span class="text-primary text-bold form-label">[ W- 1920 / H- 840 ]</span>
                     <input type="file" class="form-control" name="image" id="validationCustom04" required>   
                   </div>
 
@@ -134,7 +134,7 @@
         <div class="modal-dialog modal-dialog-centered modal-md modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title fw-bold" id="expaddLabel"> Edit Slider Information</h5>
+              <h5 class="modal-title fw-bold" id="expaddLabel">Edit Slider Information</h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
@@ -145,7 +145,7 @@
                  method="post" enctype="multipart/form-data">
                   @csrf              
                   <div class="">
-                    <label class="form-label">Image</label>
+                    <label class="form-label">Image</label> <span class="text-primary text-bold form-label">[ W- 1920 / H- 840 ]</span>
                     <input type="file" class="form-control" name="image" id="validationCustom04" required>   
                     <input type="hidden" class="form-control slide_id" name="slide_id" required>   
                   </div>

@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 
 @section('title')
-    contact
+Contact SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 
 
@@ -62,12 +62,12 @@
             <div class="mb-3">
                 <div class="row g-3 mb-3">
                     <div class="col-sm-6">
-                      <label class="form-label">Website Logo</label>
+                      <label class="form-label">Website Logo</label>  <span class="text-primary text-bold form-label">[ W- 275 / H- 58 ]</span>
                       <input type="file"  class="form-control" name="image" >
                     </div>
                     <div class="col-sm-6">
                        
-                        <img class="w120 rounded img-fluid image" src="{{ asset('/') }}{{ $contact->image }}" alt="" width="50" height="50" >
+                        <img class="w120 rounded img-fluid image bg-dark" src="{{ asset('/') }}{{ $contact->image }}" alt="" width="100" height="50" >
                        
                     </div>
                   </div>

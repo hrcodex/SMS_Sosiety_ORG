@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 
 @section('title')
-    Donation
+FAQ SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 
 
@@ -70,7 +70,7 @@
         <div class="modal-dialog modal-dialog-centered modal-md modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title fw-bold" id="expaddLabel">নতুন প্রশ্নোত্তর যোগ করুন <span class="spinner-border spinner-border-sm text-primary submitBTNLoading" role="status" aria-hidden="true"></span></h5>
+              <h5 class="modal-title fw-bold" id="expaddLabel">Add New<span class="spinner-border spinner-border-sm text-primary submitBTNLoading" role="status" aria-hidden="true"></span></h5>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">

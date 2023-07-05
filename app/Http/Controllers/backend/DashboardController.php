@@ -8,6 +8,7 @@ use App\Models\Event;
 use App\Models\Expense;
 use App\Models\Member;
 use App\Models\MonthlyFee;
+use App\Models\Notice;
 use App\Models\OrderEntry;
 use App\Models\Product;
 use App\Models\User;
@@ -38,6 +39,8 @@ class DashboardController extends Controller
         $total_project = Event::all();
         $total_images = Event::all();
 
+        $notice = Notice::all();
+
         return view('backend.dashboard.dashboard', [
 
             'total_member' => $total_member,
@@ -50,6 +53,7 @@ class DashboardController extends Controller
             'current_amount' => $current_amount,
             'total_project' => $total_project,
             'total_images' => $total_images,
+            'notice' => $notice,
             'filter_by' => $filter_by,
 
         ]);
@@ -79,6 +83,8 @@ class DashboardController extends Controller
             // ---------------
             $total_project = Event::where('date', $data)->get();
             $total_images = Event::where('date', $data)->get();
+            // ---------------
+            $notice = Notice::where('date', $data)->get();
         }
         if ($id == 3) { //month wize information 
 
@@ -98,6 +104,8 @@ class DashboardController extends Controller
             // ---------------
             $total_project = Event::where('month', $data)->get();
             $total_images = Event::where('month', $data)->get();
+            // ---------------
+            $notice = Notice::where('month', $data)->get();
         } elseif ($id == 4) { //Year wize information 
 
             $data = date('Y', strtotime(today()));
@@ -116,6 +124,8 @@ class DashboardController extends Controller
             // ---------------
             $total_project = Event::where('year', $data)->get();
             $total_images = Event::where('year', $data)->get();
+            // ---------------
+            $notice = Notice::where('year', $data)->get();
         }
 
 
@@ -131,6 +141,7 @@ class DashboardController extends Controller
             'current_amount' => $current_amount,
             'total_project' => $total_project,
             'total_images' => $total_images,
+            'notice' => $notice,
             'filter_by' => $filter_by,
 
         ]);

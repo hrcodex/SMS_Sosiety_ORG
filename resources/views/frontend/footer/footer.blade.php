@@ -9,17 +9,18 @@
                 <!-- Footer Widget 1 -->
                 <div class="col-md-4">
                     <div class="widget widget-footer">
-                    <h4>About Us</h4>
-                    
+                    <h4>Site Map</h4>
+                       {{-- <li><a href="#about">About</a></li>       --}}
+                
                     <!-- Menu links -->
                     <ul class="categories">
-                        <li><a href="#">About Event</a></li>
-                        <li><a href="#">Current Projects</a></li>
-                        <li><a href="#">Ourt Volunteers</a></li>
-                        <li><a href="#">Our Partners</a></li>
-                        <li><a href="#">Our Gallery</a></li>
-                        <li><a href="#">Our Shop</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="{{route('web_home.index')}}">Home</a></li>
+                        <li><a href="{{ asset('/') }}#about-section">About</a></li>
+                        <li><a href="{{ route('web_member.index') }}">Members</a></li>
+                        <li><a href="{{route('web_gallery.index')}}">Gallery</a></li>
+                        <li><a href="{{ route('web_event.index') }}">Events</a></li>
+                        <li><a href="{{ route('web_notice.index') }}">Notice</a></li>
+                        <li><a href="{{ asset('/') }}#contact">Contact Us</a></li>
                     </ul>
                     </div>
                 </div>
@@ -28,33 +29,18 @@
                 <!-- Footer Widget 2 -->
                 <div class="col-md-4">
                     <div class="widget widget-footer">
-                        <h4>Latest Tweets</h4>
-                        
-                        <!-- Tweets Slider -->
                         <div class="tweets-slider">
                             <ul class="slides">
                             
                                 <!-- Tweet 01 -->
                                 <li>
                                     <div class="tweet-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet bibendum dolor <a href="#">http://google.com</a>
+                                        SMS Sosiety Foundation is a non-profit organization that empowers underprivileged individuals and communities in Bangladesh through education, youth development, women's empowerment, climate change, governance and poverty alleviation.
                                     </div>
-                                    <div class="tweet-details">
-                                        <span class="tweet-date">January 22, 8:24 am</span>
-                                        <span class="tweet-author">by: <a href="#">@yourTwiteer</a></span>
-                                    </div>
+                                    
                                 </li>
                                 
-                                <!-- Tweet 02 -->
-                                <li>
-                                    <div class="tweet-body">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet bibendum dolor <a href="#">http://google.com</a>
-                                    </div>
-                                    <div class="tweet-details">
-                                        <span class="tweet-date">January 22, 8:24 am</span>
-                                        <span class="tweet-author">by: <a href="#">@yourTwiteer</a></span>
-                                    </div>
-                                </li>
+                               
                             </ul>
                         </div>
                     </div>
@@ -64,16 +50,10 @@
                 <!-- Footer Widget 3-->
                 <div class="col-md-4">
                     <div class="widget widget-footer">
-                        <h4>Subscribe</h4>
-                        <div class="widget-body">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet bibendum dolor.
+                        <h4>Making the world a better place together.</h4>
+                        <h4>Ending hunger. For good.</h4>
+                        <h4>happiness Comes from your Action.</h4>
                         
-                        <!-- Subscribe form -->
-                        <form action="http://104.236.102.187/" class="subscribe-f">
-                            <input type="text" class="form-control subscribe" placeholder="Your Mail" name="subscribe-footer"/>
-                            <i class="fa fa-pencil"></i>
-                        </form>
-                        </div>
                     </div>
                 </div>
                 
@@ -88,19 +68,21 @@
         <div class="container">
             <div class="row">
             
-                <!-- Copyright at left side -->
-                <div class="copyright col-md-7">
-                &copy; Created by <a href="#">wwwebinvader</a> &nbsp;&nbsp;&nbsp;<span>/</span>&nbsp;&nbsp;&nbsp; <a class="white-link" href="#">Get news by E-mail</a>
+               <!-- Copyright at left side -->
+               <div class="copyright col-md-7">
+                &copy; Created by <a href="https://hrcodex.com/" target="_blank">HR Codex LTD</a> &nbsp;&nbsp;&nbsp;<span>/</span>&nbsp;&nbsp;&nbsp; As a Company, we strive to create innovative and effective solutions
                 </div>
                 
                 <!-- Social Icons at Right side -->
                 <div class="social-footer col-md-5 text-right">
-                    <span class="span-join">Join Us:</span>
+                    <span class="span-join">Contact With Us:</span>
                     <ul class="social-icons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-                        <li><a href="#"><i class="fa fa-envelope"></i></a></li>
+                        <li><a href="tel:01790370183"><i class="fa fa-phone"></i></a></li>
+                        {{-- <li><a href="{{ $contact->twitter_id }}"><i class="fa fa-twitter"></i></a></li> --}}
+                        <li><a href="https://www.facebook.com/hrcodex"><i class="fa fa-facebook"></i></a></li>
+                        {{-- <li><a href=""><i class="fa fa-instagram"></i></a></li> --}}
+                        <li><a href="mailto:mailto:hrcodexbd@gmail.com"><i class="fa fa-envelope"></i></a></li>
+                        
                     </ul>
                 </div>
                 

@@ -1,7 +1,7 @@
 @extends('backend.admin_master')
 
 @section('title')
-    All Members
+Members SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 
 
@@ -19,12 +19,17 @@
 
         
 
-            <h3 class="fw-bold mb-0">All Members</h3>
+            <h3 class="fw-bold mb-0">Total Members : {{ count($member) }}</h3>
 
 
             <div class="col-auto d-flex w-sm-100">
               <button type="button" class="btn btn-primary btn-set-task w-sm-100" data-bs-toggle="modal" data-bs-target="#expadd">
-                <i class="icofont-plus-circle me-2 fs-6"></i>Add new Members </button>
+
+              
+                <i class="icofont-plus-circle me-2 fs-6"></i>Add New</button>
+             
+               
+                
             </div>
           </div>
           

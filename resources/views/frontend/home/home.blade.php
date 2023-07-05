@@ -1,7 +1,7 @@
 @extends('frontend.master')
 
 @section('title')
-    Main Content
+Home SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chittagong Bangladesh|সমাজসেবী SMS Sosiety যুব সংগঠন সোনারগাঁও রাঙ্গুনিয়া চট্রগ্রাম বাংলাদেশ | non-profit organization
 @endsection
 
 @section('body')
@@ -65,7 +65,7 @@
 			
 				<!-- Col 1 -->
 				<div class="col-md-8 animate fadeInLeft">
-					<h1 class="block-title">আমাদের <span>সম্পর্কে</span></h1>
+					<h1 class="block-title">About <span>US</span></h1>
 					<p>{!! $about->desctiption !!}</p>
 					<hr />
 				</div>
@@ -118,7 +118,7 @@
 		
 		   <!-- page title -->
 		   <div class="block-title">
-			<h1>আমাদের কার্যক্রম</h1>
+			<h1>Recent Events</h1>
 			{{-- <a href="#" class="view-all"><i class="fa fa-plus-circle"></i>View All</a> --}}
 		</div>
 	
@@ -148,7 +148,7 @@
 										<div class="blog-item-t">
 											<span class="fa fa-file-text-o"></span>									
 											<span class="link-read-more-w">
-												<a href="{{ route('event.index') }}"  class="link-read-more"><span>Read More</span> <i class="fa fa-arrow-right"></i></a>
+												<a href="{{ route('web_event.index') }}"  class="link-read-more"><span>Read More</span> <i class="fa fa-arrow-right"></i></a>
 											</span>
 										</div>
 									</div>
@@ -156,20 +156,17 @@
 									<!-- post excerpt -->
 									<div class="blog-item">
 										<div class="blog-item-left">
-											<h4><a href="{{ route('event.index') }}" >{{ $data->title }}</a></h4>
+											<h4><a href="{{ route('web_event.index') }}" >{{ Str::limit($data->title, 24) }}</a></h4>
 											<div class="blog-item-excerpt">{!! Str::limit($data->description, 70) !!}</div>
-											
 											<!-- social icons -->
-											<div class="share-excerpt">
-												share:
-												<ul class="social-icons">
-													<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-													<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-													<li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-													<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-													<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-												</ul>
-											</div>
+									<div class="share-excerpt">
+										<ul class="social-icons">
+											<li><a><i class="fa fa-calendar"></i> {{ $data->date }}<span> & </span> <i class="fa fa-clock-o"></i> {{ $data->time }} </a> </li>
+											
+										</ul>
+									</div>
+											
+											
 										</div>
 										
 										<!-- post meta -->
@@ -178,7 +175,7 @@
 												<span class="blog-item-number">{{ date('d', strtotime($data->date)); }}</span>
 												<span class="blog-item-month"><p>{{ date('M', strtotime($data->month)); }}</p></span>
 											</div>
-											<a href="{{ route('event.index') }}" class="arrow-right"><i class="fa fa-arrow-right"></i></a>
+											<a href="{{ route('web_event.index') }}" class="arrow-right"><i class="fa fa-arrow-right"></i></a>
 										</div>
 									   
 									
@@ -198,7 +195,7 @@
 					
 					<!-- Two Buttons -->
 					<div class="two-buttons">
-					   <a href="{{ route('event.index') }}" class="btn btn-line btn-white">View All Events &nbsp;&nbsp;&nbsp;<i class="fa fa-long-arrow-right"></i></a>
+					   <a href="{{ route('web_event.index') }}" class="btn btn-line btn-white">View All Events &nbsp;&nbsp;&nbsp;<i class="fa fa-long-arrow-right"></i></a>
 					</div>
 					
 				</div><!-- /.gallery-wrapper -->
@@ -218,7 +215,7 @@
 	
 			<!-- Title Section -->
 			<div class="block-title-c">
-				<h1># আমরা # <span style="font-size: 17px" class="text-center"><a href="{{ route('member.index') }}" class="view-all"><i class="fa fa-plus-circle"></i>View All</a></span>
+				<h1># আমরা # <span style="font-size: 17px" class="text-center"><a href="{{ route('web_member.index') }}" class="view-all"><i class="fa fa-plus-circle"></i>View All</a></span>
 				</h1>
 			</div>	
 			
@@ -423,3 +420,4 @@
 	
 
 @endsection
+

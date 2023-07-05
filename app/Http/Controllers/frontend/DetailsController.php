@@ -11,7 +11,7 @@ class DetailsController extends Controller
 {
     public function index($id)
     {
-
+       
         $contact = Contact::find(1);
         $events = Event::find($id);
 
@@ -20,6 +20,7 @@ class DetailsController extends Controller
 
             'contact' => $contact,
             'data' => $events,
+            
         ]);
     }
 }
