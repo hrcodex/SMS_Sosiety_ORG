@@ -57,6 +57,7 @@ Expense SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chitt
                         <tr role="row">
                           <th class="sorting_asc" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 57.2px;" aria-sort="ascending" aria-label="Id: activate to sort column descending">Name</th>
                           <th class="sorting" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 57.2px;" aria-label="Items: activate to sort column ascending">Amount</th>
+                          <th class="sorting" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 57.2px;" aria-label="Items: activate to sort column ascending">Payment Method</th>
                           <th class="sorting" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 57.2px;" aria-label="Items: activate to sort column ascending">Image</th>
                      
                          
@@ -80,6 +81,7 @@ Expense SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chitt
                           </td>
 
                           <td><strong> {{ $data->amount }} <span>টাকা</span></strong></td>
+                          <td>{{ $data->payment_method }}</td>
 
                           <td> 
                             @if ($data->image == null)

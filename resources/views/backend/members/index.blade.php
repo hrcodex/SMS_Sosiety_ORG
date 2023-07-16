@@ -55,10 +55,14 @@ Members SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chitt
                         <tr role="row">
                           <th class="sorting_asc" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 57.2px;" aria-sort="ascending" aria-label="Id: activate to sort column descending">Name</th>
                           <th class="sorting" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 57.2px;" aria-label="Items: activate to sort column ascending">Image</th>
-                          <th class="sorting" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 57.2px;" aria-label="Items: activate to sort column ascending">Role</th>
+                          <th class="sorting" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 57.2px;" aria-label="Items: activate to sort column ascending">Father's Name</th>
+                          <th class="sorting" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 57.2px;" aria-label="Items: activate to sort column ascending">Position</th>
+                          <th class="sorting" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 57.2px;" aria-label="Items: activate to sort column ascending">National Identity</th>
                      
                          
+                          <th class="sorting" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 115.2px;" aria-label="Purchase Status: activate to sort column ascending">Phone</th>
                           <th class="sorting" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 115.2px;" aria-label="Purchase Status: activate to sort column ascending">Publication Status</th>
+                          <th class="sorting" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 115.2px;" aria-label="Purchase Status: activate to sort column ascending">Address</th>
                           <th class="dt-body-right sorting" tabindex="0" aria-controls="myProjectTable" rowspan="1" colspan="1" style="width: 0px; display: none;" aria-label="Actions: activate to sort column ascending">Actions</th>
                         </tr>
                       </thead>
@@ -70,7 +74,7 @@ Members SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chitt
                           
                       
 
-                        <tr role="row" class="even">
+                        <tr role="row" class="even {{ $data->publication_status == 0 ? "bg-warning" : "" }} ">
                           <td tabindex="0" class="sorting_1">
                             <strong>{{ $data->name }}</strong>
                           </td>
@@ -83,10 +87,17 @@ Members SMS Sosiety | SMS Sosiety Charity Foundation in Sonargaon Rangunia Chitt
                           </td>
 
                           <td>
+                            <span>{{ $data->fathers_name }}</span>
+                          </td>
+                          <td>
                             <span>{{ $data->position }}</span>
                           </td>
 
-                          <td>{{ $data->email }}</td>
+                          <td>{{ $data->national_identity }}</td>
+                          <td>{{ $data->phone }}</td>
+                        
+                          <td>{{ $data->publication_status == 1 ? "Published" : "Unpublished"}}</td>
+                          <td>{{ $data->address }}</td>
                         
                           {{-- <td>
                             <span class="badge bg-success">Active</span>

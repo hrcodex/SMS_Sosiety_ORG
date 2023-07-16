@@ -16,4 +16,5 @@ class MonthlyFee extends Model
     {
         return $this->belongsTo(Member::class, 'member_uniq_id');
     }
+   
 }

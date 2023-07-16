@@ -9,4 +9,5 @@ class Member extends Model
 {
     use HasFactory;
     protected $guarded = [];
+   
 }
